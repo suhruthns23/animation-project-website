@@ -2,26 +2,31 @@ function toggle(id) {
   let cie = document.getElementById("cie");
   let assign = document.getElementById("assign");
 
-  cie.style.display = "none";
-  assign.style.display = "none";
+  // close both
+  if (cie) cie.style.maxHeight = null;
+  if (assign) assign.style.maxHeight = null;
 
   let selected = document.getElementById(id);
-  selected.style.display = "flex";
+
+  if (selected.style.maxHeight) {
+    selected.style.maxHeight = null;
+  } else {
+    selected.style.maxHeight = selected.scrollHeight + "px";
+  }
 }
 
-// Sub dropdown toggle
 function subToggle(id) {
   let all = document.querySelectorAll(".sub-dropdown");
 
   all.forEach(el => {
-    if (el.id !== id) el.style.display = "none";
+    if (el.id !== id) el.style.maxHeight = null;
   });
 
   let current = document.getElementById(id);
 
-  if (current.style.display === "flex") {
-    current.style.display = "none";
+  if (current.style.maxHeight) {
+    current.style.maxHeight = null;
   } else {
-    current.style.display = "flex";
+    current.style.maxHeight = current.scrollHeight + "px";
   }
 }
