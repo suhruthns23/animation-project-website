@@ -1,47 +1,33 @@
-/* BACKGROUND */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1c1c1c);
-  background-size: 400% 400%;
-  animation: gradientBG 10s ease infinite;
+  background: linear-gradient(to right, #141e30, #243b55);
   color: white;
 }
 
-@keyframes gradientBG {
-  0% {background-position: 0% 50%;}
-  50% {background-position: 100% 50%;}
-  100% {background-position: 0% 50%;}
-}
-
+/* CONTAINER */
 .container {
   text-align: center;
   padding: 30px;
 }
 
-/* HEADER CARD */
+/* HEADER */
 .header-card {
   background: rgba(255,255,255,0.08);
   padding: 25px;
-  border-radius: 20px;
+  border-radius: 15px;
   width: 85%;
   margin: auto;
   margin-bottom: 30px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 0 25px rgba(0,0,0,0.4);
-  transition: 0.3s;
+  backdrop-filter: blur(10px);
 }
 
-.header-card:hover {
-  transform: scale(1.02);
-}
-
-/* BUTTONS */
+/* MAIN BUTTON */
 button {
   padding: 12px 25px;
   margin: 15px;
   cursor: pointer;
-  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  background: #ff4c4c;
   border: none;
   color: white;
   font-size: 16px;
@@ -50,15 +36,15 @@ button {
 }
 
 button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 15px #ff4b2b;
+  background: #ff1a1a;
+  box-shadow: 0 0 10px #ff4c4c;
 }
 
-/* MAIN DROPDOWN */
+/* DROPDOWN */
 .dropdown {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease;
+  transition: max-height 0.4s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,9 +64,7 @@ button:hover {
 }
 
 .dropdown a:hover {
-  background: #ff416c;
-  box-shadow: 0 0 10px #ff416c;
-  transform: scale(1.05);
+  background: #ff4c4c;
 }
 
 /* SUB BUTTON */
@@ -88,7 +72,7 @@ button:hover {
   padding: 10px;
   margin: 6px;
   width: 260px;
-  background: rgba(0,0,0,0.4);
+  background: rgba(255,255,255,0.1);
   border: none;
   color: white;
   cursor: pointer;
@@ -97,14 +81,14 @@ button:hover {
 }
 
 .sub-btn:hover {
-  background: #ff4b2b;
+  background: #ff4c4c;
 }
 
 /* SUB DROPDOWN */
 .sub-dropdown {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease;
+  transition: max-height 0.4s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -115,4 +99,8 @@ footer {
   margin-top: 30px;
   font-size: 14px;
   opacity: 0.7;
+}
+a {
+  color: white;
+  text-decoration: none;
 }
